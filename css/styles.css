@@ -1,0 +1,238 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 首页样式 */  
+#homePage {  
+  color: #fff;  
+  text-align: center;  
+  /* 设置背景图片 */  
+  background-image: url('E://vscode//Myproject2//images//home_background.jpg'); 
+  background-size: cover; /* 覆盖整个容器，图片可能会被裁剪以填满容器 */  
+  background-position: center; /* 图片居中显示 */  
+  height: 100vh; /* 假设你希望背景图片覆盖整个视口高度，可以设置为100vh */  
+  /* 如果需要，可以添加以下属性以确保内容在背景图片上清晰可见 */  
+  position: relative; /* 相对于自身定位 */  
+  z-index: 1; /* 默认值，但有助于理解层叠上下文 */  
+}  
+  
+#homePage h2 {  
+  margin-top: 50px;  
+  font-size: 2.5em;  
+  /* 可以添加一些样式以确保标题在背景图片上清晰可见，例如： */  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文本阴影 */  
+}  
+  
+#homePage section {  
+  margin: 20px 0;  
+  /* 如果需要，可以添加一些内边距或边框样式 */  
+  padding: 20px;  
+  background-color: rgba(255, 255, 255, 0); /* 半透明背景，以便在背景图片上更好地显示内容 */  
+  border-radius: 8px; /* 圆角边框 */  
+}  
+  
+#homePage button {  
+  background-color: #4CAF50;  
+  color: rgb(255, 255, 255);  
+  padding: 10px 20px;  
+  border: none;  
+  cursor: pointer;  
+  /* 可以在按钮上添加一些额外的样式，如阴影，使其更加突出 */  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+  
+#homePage button:hover {  
+  background-color: #45a049;  
+}
+
+/* 比赛指南样式 */
+
+#guidePage {
+  color: #000;
+}
+
+#guidePage h2 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+.bold-center {  
+  font-weight: bold; /* 加粗文本 */  
+  text-align: center; /* 文本居中 */  
+}
+.centered-content {  
+  text-align: center; /* 使文本居中 */  
+  margin: 0 auto; /* 对于块级元素，这个样式通常用于水平居中，但在这里主要是为了让div元素占据整个容器的宽度（如果需要的话），对于文本居中，主要是text-align属性 */  
+  /* 如果你想要给这段内容添加一些内边距或外边距，也可以在这里指定 */  
+  padding: 10px; /* 示例：给内容添加一些内边距 */  
+}  
+
+/* 如果你想要让<strong>标签的文本（即标题）有更特殊的样式，你也可以为它添加一个类名，并在CSS中定义这个类的样式 */  
+.centered-content strong {  
+  /* 你可以在这里添加任何你想要的样式，比如字体大小、颜色等 */  
+  font-size: 15px; /* 示例：增加标题的字体大小 */  
+}
+/* 我要报名样式 */
+#signupPage {
+  color: #000;
+}
+
+#signupPage h2 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+#signupPage form {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#signupPage label {
+  display: block;
+  margin: 10px 0;
+}
+
+#signupPage input, #signupPage select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#signupPage button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#signupPage button:hover {
+  background-color: #45a049;
+}
+
+/* 评审页面样式 */
+#reviewPage {
+  color: #000;
+}
+
+#reviewPage h2 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+#reviewPage table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#reviewPage table, #reviewPage th, #reviewPage td {
+  border: 1px solid black;
+}
+
+#reviewPage th, #reviewPage td {
+  padding: 10px;
+  text-align: left;
+}
+
+#reviewPage th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 模态框样式 */
+.modal {  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    z-index: 1000;  
+    pointer-events: none; /* 禁止点击背景 */  
+}  
+  
+.modal-overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0, 0, 0, 0.5);  
+    pointer-events: auto; /* 允许点击背景关闭模态框 */  
+}  
+  
+.modal-content {  
+    background-color: white;  
+    padding: 20px;  
+    border-radius: 8px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    pointer-events: auto; /* 确保模态框内部元素可以交互 */  
+}  
+  
+.form-group {  
+    margin-bottom: 15px;  
+}  
+  
+.error-message {  
+    color: red;  
+    font-size: 0.8em;  
+    display: none; /* 初始时不显示错误信息 */  
+}  
+  
+.hidden {  
+    display: none;  
+}
+
+/* 背景图片 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-image) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.5;
+}

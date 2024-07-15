@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>某市职业学校教学能力大赛</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --background-image: url('E://vscode//Myproject2//images//home_background.jpg');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>某市职业学校教学能力大赛</h1>
+        <nav id="nav">
+            <a href="#" id="home">首页</a>
+            <a href="#" id="guide">比赛指南</a>
+            <a href="#" id="signup">我要报名</a>
+            <a href="#" id="review" class="hidden">进入专家评审</a>
+            <button id="loginButton">登录</button>
+            <div id="userActions" class="hidden">
+                <span id="username"></span>
+                <button id="logoutButton">退出登录</button>
+                <button id="changePasswordButton">修改密码</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content" id="homePage">
+        <h3>首页</h3>
+        <section>
+            <h3>报名入口</h3>
+            <button id="applyNow">立即报名</button>
+        </section>
+        <section>
+            <h3>赛事流程</h3>
+            <p>登录报名 -> 提交作品 -> 作品评审 -> 获奖公示</p>
+        </section>
+        <section>
+            <h3>通知公告</h3>
+            <p id="announcement">这里是公告内容...</p>
+        </section>
+    </div>
+
+    <div class="content hidden" id="guidePage">
+        <h2>比赛指南</h2>
+        <p class="bold-center">2023年某市中等职业学校教学能力比赛规程</p>
+        <p>为落实立德树人根本任务，促进“三全育人”体系建设，探索“岗课赛证”综合育人，落实职业教育国家教学标准和课程思政要求，持续深三教改革和教育数字化转型发展，推进高水平教师教学创新团队建设，提高我市教师的师德践行能力、专业教学能力、数字素养水平、综合育人能力和自主发展能力，决定举办2023 年某市中等职业学校教学能力比赛；
+            比赛要求内容：
+            重点考察教学团队 ( 3-4 人) 针对某门课程中部分教学内 容完成教学设计、实施课堂教学、达成教学目标、进行反思改进的能力。
+            </p>
+        <div class="centered-content">  
+            <strong>一、教学内容</strong><br>  
+            根据职业教育国家教学标准要求，对接职业标准(规范)、职业技能等级标准等，契合层次定位，优化课程结构、更新教学内容。公共基础课程内容体现思想性、科学性、基础性、职业性、时代性，体现学科知识与行业（或职业）应用场景的融合。其中，思想政治课以《中等职业学校思想政治课程标准 (2020年版)》为依据，坚持用习近平新时代中国特色社会主义思想铸魂育人，突出职业教育特色，进一步拓展教学内容深度和广度。专业课程内容对接新方法、新技术、新工艺、新标准，体现专业升级和数字化转型、绿色化改造，鼓励按照生产实际和岗位需求设计模块化课程。结合教学实际融入科学精神、工程思维、创新意识和数字素养，注重劳动精神、工匠精神、劳模精神培育。<br>  
+            <strong>二、教学设计</strong><br>  
+            依据国家教学标准、学校专业人才培养方案和课程标准，针对参赛教学内容，进行学情分析，确定教学目 标，制定教学策略，优化教学过程。针对不同生源分类施教、因材施教。合理运用平台、技术、方法和资源等组织课堂教学。提高课程思政内涵融入课堂教学的水平，杜绝各种形式主义。公共基础课根据学科特点选用恰当的教法学法；思想政治课以“八个统一”为统领，优化教学过程，增强思政课教学的吸引力、说服力、感染力。专业课程鼓励实施项目式、任务式、案例式、情境化教学，强化工学结合、理实一体、手脑并用。<br>
+            <strong>三、</strong><br> 
+            .....
+        </div>
+
+    </div>
+
+    <div class="content hidden" id="signupPage">
+        <h2>我要报名</h2>
+        <div id="fillInfo">
+            <h3>填写作品信息</h3>
+            <form>
+                <label>作品名称: <input type="text" id="workName" required></label><br>
+                <label>参赛组别: 
+                    <select id="category" required>
+                        <option value="">请选择</option>
+                        <option value="思政课程组">思政课程组</option>
+                        <option value="公共基础课程组">公共基础课程组</option>
+                        <option value="专业技能课程一组">专业技能课程一组</option>
+                        <option value="专业技能课程二组">专业技能课程二组</option>
+                    </select>
+                </label><br>
+                <label>参赛学校: <input type="text" id="school" required></label><br>
+                <label>参赛团队: <input type="text" id="team" required placeholder="多人用逗号隔开"></label><br>
+                <label>参赛报名表: <input type="file" id="applicationForm" required></label><br>
+                <label>信息公示件: <input type="file" id="publicInfo" required></label><br>
+                <label>联系方式: <input type="text" id="contact" required></label><br>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="content hidden" id="reviewPage">
+        <h2>进入专家评审</h2>
+        <table>
+            <tr>
+                <th>作品名称</th>
+                <th>参赛组别</th>
+                <th>参赛学校</th>
+                <th>参赛团队</th>
+                <th>评分</th>
+            </tr>
+            <!-- 评审数据 -->
+        </table>
+    </div>
+
+    <!-- 模态框 - 登录 -->
+    <div id="loginModal" class="hidden">
+        <h3>登录</h3>
+        <form>
+            <label>用户名: <input type="text" id="usernameInput" required></label><br>
+            <label>密码: <input type="password" id="passwordInput" required></label><br>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+
+    <!-- 模态框 - 修改密码 -->
+    <div id="changePasswordModal" class="hidden">
+        <h3>修改密码</h3>
+        <form>
+            <label>旧密码: <input type="password" id="oldPassword" required></label><br>
+            <label>新密码: <input type="password" id="newPassword" required></label><br>
+            <label>确认新密码: <input type="password" id="confirmPassword" required></label><br>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('home').addEventListener('click', function () {
+            showPage('homePage', 'url(images/home_background.jpg)');
+        });
+
+        document.getElementById('guide').addEventListener('click', function () {
+            showPage('guidePage', 'url(images/guide_background.jpg)');
+        });
+
+        document.getElementById('signup').addEventListener('click', function () {
+            showPage('signupPage', 'url(images/signup_background.jpg)');
+        });
+
+        document.getElementById('review').addEventListener('click', function () {
+            showPage('reviewPage', 'url(images/review_background.jpg)');
+        });
+
+        function showPage(pageId, backgroundUrl) {
+            document.querySelectorAll('.content').forEach(function (page) {
+                page.classList.add('hidden');
+            });
+            document.getElementById(pageId).classList.remove('hidden');
+            document.documentElement.style.setProperty('--background-image', backgroundUrl);
+        }
+    </script>
+</body>
+</html>
